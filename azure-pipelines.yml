@@ -39,6 +39,11 @@ stages:
             provider: 'azurerm'
             command: 'plan'
             environmentServiceNameAzureRM: 'Pay-As-You-Go(4accce4f-9342-4b5d-bf6b-5456d8fa879d)'
+        - task: Bash@3
+          displayName: Install zip utility
+          inputs:
+            targetType: 'inline'
+            script: 'sudo apt-get update && sudo apt-get install -y zip'
         - task: ArchiveFiles@2
           displayName: Archive Files
           inputs:
