@@ -6,7 +6,7 @@ pool:
 stages:
   - stage: Terraform
     jobs:
-      - job: Terraform Build
+      - job: TerraformBuild
         steps:
         - task: TerraformTaskV4@4
           displayName: Terraform Init
